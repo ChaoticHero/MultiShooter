@@ -35,7 +35,6 @@ public class CameraController : MonoBehaviour
         // clamp the vertical rotation
         rotY = Mathf.Clamp(rotY, minY, maxY);
 
-        isSpectator = true;
         // are we spectating?
         if (isSpectator)
         {
@@ -55,15 +54,18 @@ public class CameraController : MonoBehaviour
         }
         else
         {
-            // rotate the camera vertically
-            // translate mouse y movement to rotate around the camera's x-axis
+
             transform.localRotation = Quaternion.Euler(-rotY, 0, 0);
 
-            // rotate the player horizontally
-            // likewise we want mouse x movement to rotate the player around it's y-axis
-            //transform.parent.rotation = Quaternion.Euler(transform.rotation.x, rotX, 0);
+        
+            transform.parent.rotation = Quaternion.Euler(0, rotX, 0);
         }
+        
     }
-
+    public void SetAsSpectator()
+        {
+            isSpectator = true;
+            transform.parent = null; // detach from player avatar
+        }
   
 }

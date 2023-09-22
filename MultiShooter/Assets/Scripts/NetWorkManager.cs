@@ -39,6 +39,7 @@ public class NetworkManager : MonoBehaviourPunCallbacks
     {
         Debug.Log("Hope this Works");
         // seems this is now required in order to receive OnRoomListUpdate callbacks:
+        PhotonNetwork.JoinLobby();
     }
 
     // attempts to create a room
