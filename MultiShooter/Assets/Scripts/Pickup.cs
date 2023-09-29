@@ -42,6 +42,6 @@ public class Pickup : MonoBehaviourPun
     [PunRPC]
     public void DestroyPickup()
     {
-        PhotonNetwork.Destroy(gameObject);
+        Destroy(gameObject);
     }
 }
