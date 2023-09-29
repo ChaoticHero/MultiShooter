@@ -41,6 +41,15 @@ MonoBehaviour:
   - ImInGame
   - SpawnPlayer
   - Initialize
+  - DamageFlash
+  - TakeDamage
+  - SpawnBullet
+  - WinGame
+  - Die
+  - DestroyPickup
+  - AddKill
+  - GiveAmmo
+  - Heal
   DisableAutoOpenWizard: 1
   ShowSettings: 0
   DevRegionSetOnce: 1
