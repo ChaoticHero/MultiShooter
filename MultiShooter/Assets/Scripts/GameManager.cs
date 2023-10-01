@@ -94,7 +94,9 @@ public class GameManager : MonoBehaviourPun
 
     void GoBackToMenu()
     {
+        PhotonNetwork.LeaveRoom();
         NetworkManager.instance.ChangeScene("Menu");
+        Destroy(NetworkManager.instance.gameObject);
     }
 }
 
